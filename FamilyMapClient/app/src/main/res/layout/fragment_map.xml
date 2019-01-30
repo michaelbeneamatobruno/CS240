@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="455dp"
+        android:layout_weight="1" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/event_bar"
+        android:layout_width="match_parent"
+        android:layout_height="247dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/map_fragment_gender_image"
+            android:layout_width="94dp"
+            android:layout_height="99dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/event_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/event_person_name"
+            android:layout_width="276dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Select a marker"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/event_info"
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/event_person_name" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>
